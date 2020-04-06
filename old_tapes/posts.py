@@ -13,6 +13,8 @@ def pretty_print_posts(posts):
         link = post.get("link")
         if link is None:
             continue
+        if "facebook.com" in link:
+            continue
         created = get_date(post.get("created_time"))
         name = post.get("name", "")
 
