@@ -14,5 +14,7 @@ def pretty_print_posts(posts):
         if link is None:
             continue
         created = get_date(post.get("created_time"))
+        name = post.get("name", "")
 
-        print(format_date(created), link)
+        print(f"{format_date(created)} {colored(name, 'green', attrs=['blink'])}")
+        print(f"\t\t {colored(link, 'blue', on_color='on_cyan')}")

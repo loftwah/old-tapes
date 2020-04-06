@@ -31,7 +31,7 @@ class GraphAPIClient:
             url,
             params={
                 "access_token": self.access_token,
-                "fields": "id,link,created_time",
+                "fields": "id,link,created_time,name",
             },
         )
         return self.process_response(response)
